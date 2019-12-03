@@ -20,5 +20,18 @@ window.addEventListener("DOMContentLoaded", () => {
             return classes
         }, [])
     }
+
+
+    //Zad 4_3
+    let listItems = document.getElementsByClassName("sample_class_2")[0]
+        .getElementsByTagName("LI");
+
+    function getInnerTextsOfElements(elements) {
+        return Array.from(elements).reduce((texts, current) => {
+            texts.push(current.innerText);
+            return texts
+        }, [])
+    }
+
 });
 
