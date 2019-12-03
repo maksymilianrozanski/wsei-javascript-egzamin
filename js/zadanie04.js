@@ -33,5 +33,14 @@ window.addEventListener("DOMContentLoaded", () => {
         }, [])
     }
 
+    //Zad 4_4
+    let hrefs = document.getElementsByTagName("a");
+
+    function getAddressesOfElements(elements) {
+        return Array.from(elements).reduce((addresses, current) => {
+            addresses.push(current.getAttribute("href"));
+            return addresses
+        }, [])
+    }
 });
 
