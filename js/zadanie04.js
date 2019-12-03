@@ -11,6 +11,8 @@ window.addEventListener("DOMContentLoaded", () => {
             , [])
     }
 
+    getTagsOfElements(simpleClassElements);
+
     //Zad 4_2
     let sampleIdElement = document.getElementById("sample_id");
 
@@ -21,6 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }, [])
     }
 
+    getClassesOfElement(sampleIdElement);
 
     //Zad 4_3
     let listItems = document.getElementsByClassName("sample_class_2")[0]
@@ -33,6 +36,8 @@ window.addEventListener("DOMContentLoaded", () => {
         }, [])
     }
 
+    getInnerTextsOfElements(listItems);
+
     //Zad 4_4
     let hrefs = document.getElementsByTagName("a");
 
@@ -43,8 +48,10 @@ window.addEventListener("DOMContentLoaded", () => {
         }, [])
     }
 
+    getAddressesOfElements(hrefs);
+
     //Zad 4_5
     let sampleClass3Children = document.getElementsByClassName("sample_class_3")[0].childNodes;
-    console.log(getTagsOfElements(sampleClass3Children));
+    getTagsOfElements(sampleClass3Children);
 });
 
