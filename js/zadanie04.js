@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function getTagsOfElements(elements) {
         return Array.from(elements).reduce((tags, current) => {
-                tags.push(current.tagName);
+                if (current.tagName !== undefined) tags.push(current.tagName);
                 return tags
             }
             , [])
@@ -42,5 +42,9 @@ window.addEventListener("DOMContentLoaded", () => {
             return addresses
         }, [])
     }
+
+    //Zad 4_5
+    let sampleClass3Children = document.getElementsByClassName("sample_class_3")[0].childNodes;
+    console.log(getTagsOfElements(sampleClass3Children));
 });
 
